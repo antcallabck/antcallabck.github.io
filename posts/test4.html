@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>果果 – 果果的博客</title>
+<title>JSXGraph 三角形 Demo – 果果的博客</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1ddaa63cc98d7b260f5cf9c9021de554.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1ddaa63cc98d7b260f5cf9c9021de554.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,9 +79,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-categories','listing-tags',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -129,7 +129,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -139,7 +139,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">果果的博客</span>
     </a>
   </div>
@@ -150,23 +150,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">首页</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./categories.html"> 
+    <a class="nav-link" href="../categories.html"> 
 <span class="menu-text">分类</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="../posts.html"> 
 <span class="menu-text">所有文章</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tags.html"> 
+    <a class="nav-link" href="../tags.html"> 
 <span class="menu-text">标签</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">关于</span></a>
   </li>  
 </ul>
@@ -177,23 +177,23 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="JUU2JTk1JTk5JUU3JUE4JThC">教程 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU2JTk1JUIwJUU1JUFEJUE2">数学 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="JUU4JThCJUIxJUU4JUFGJUFE">英语 <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">果果</h1>
+<h1 class="title">JSXGraph 三角形 Demo</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -205,88 +205,71 @@ window.Quarto = {
 </header>
 
 
+<div id="box" style="width: 600px; height: 400px;">
+
+</div>
+<div id="jbox" style="width: 600px; height: 400px;">
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jsxgraph@1.4.5/distrib/jsxgraphcore.js"></script>
+<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.4.5/distrib/jsxgraph.css"></p>
+<script>
+
+ var board = JXG.JSXGraph.initBoard('jbox', {
+    boundingbox: [-5, 5, 5, -5],
+   // axis: true
+  });
+
+  var p1 = board.create('point', [1, 3], {name:'A'});
+  var p2 = board.create('point', [4, 1], {name:'B'});
+  var line = board.create('line', [p1, p2]);
+
+  // 创建圆心点
+  const center = board.create('point', [0, 0], {name: 'O'});
+
+  // 创建圆上的点
+  const pointOnCircle = board.create('point', [3, 0], {name: 'A'});
+
+  // 根据圆心和半径点创建圆
+  const circle = board.create('circle', [center, pointOnCircle], {strokeColor: 'blue'});
+
+    const P = board.create('point', [1, 2], {name: 'P', size: 3, color: 'red'});
+    const m = 1.5;
+    const Q = board.create('point', [P.X() + 1, P.Y() + m], {visible: false});
+    board.create('line', [P, Q], {strokeColor: 'blue'});
+
+
+  board = JXG.JSXGraph.initBoard('box', {
+    boundingbox: [-5, 15, 5, -15],
+    axis: true
+  });
+
+  p1 = board.create('point', [1, 3], {name:'A'});
+  p2 = board.create('point', [4, 1], {name:'B'});
+  line = board.create('line', [p1, p2]);
+
+
+   // 定义函数
+  const f = function(x) {
+    return 5*Math.sin(x) + Math.cos(5*x) ;  // 你可以换成别的函数，例如 Math.cos(x), x*x, Math.exp(x) 等
+  };
+
+  // 绘制函数图像
+  board.create('functiongraph', [f], {
+    strokeColor: 'blue',
+    strokeWidth: 2
+  });
+
+
+
+</script>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1749535211955" data-listing-reading-time-sort="2" data-listing-word-count-sort="225">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test4.html" class="no-external">JSXGraph 三角形 Demo</a>
-</h3>
-</div>
-<div class="metadata">
-<a href="./posts/test4.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="JUU2JTk1JTk5JUU3JUE4JThC" data-listing-file-modified-sort="1749521734896" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test3.html" class="no-external">多种图文混排示例</a>
-</h3>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JTk5JUU3JUE4JThC'); return false;">教程</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/test3.html" class="no-external">
-<div class="metadata-value listing-tags">
-教程1
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="JUU2JTk1JUIwJUU1JUFEJUE2" data-listing-date-sort="1749398400000" data-listing-file-modified-sort="1749527220761" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="669">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test2.html" class="no-external">线性代数基础</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">数学</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/test2.html" class="no-external">
-<div class="listing-date">
-Jun 9, 2025
-</div>
-<div class="metadata-value listing-tags">
-线性代数1,教程1
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU4JThCJUIxJUU4JUFGJUFE" data-listing-date-sort="1749398400000" data-listing-file-modified-sort="1749520226030" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test.html" class="no-external">线性代数基础</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">数学</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU4JThCJUIxJUU4JUFGJUFE'); return false;">英语</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/test.html" class="no-external">
-<div class="listing-date">
-Jun 9, 2025
-</div>
-<div class="metadata-value listing-tags">
-线性代数,教程
-</div>
-</a>
-</div>
-</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
