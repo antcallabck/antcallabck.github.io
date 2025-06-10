@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>果果 – 果果的博客</title>
+<title>多种图文混排示例 – 果果的博客</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1ddaa63cc98d7b260f5cf9c9021de554.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1ddaa63cc98d7b260f5cf9c9021de554.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,9 +114,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-categories','listing-tags',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -99,37 +134,8 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -139,7 +145,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">果果的博客</span>
     </a>
   </div>
@@ -150,23 +156,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">首页</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./categories.html"> 
+    <a class="nav-link" href="../categories.html"> 
 <span class="menu-text">分类</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="../posts.html"> 
 <span class="menu-text">所有文章</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tags.html"> 
+    <a class="nav-link" href="../tags.html"> 
 <span class="menu-text">标签</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">关于</span></a>
   </li>  
 </ul>
@@ -177,23 +183,39 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="JUU2JTk1JTk5JUU3JUE4JThC">教程 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU2JTk1JUIwJUU1JUFEJUE2">数学 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="JUU4JThCJUIxJUU4JUFGJUFE">英语 <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#左图右文经典对称" id="toc-左图右文经典对称" class="nav-link active" data-scroll-target="#左图右文经典对称">1. 左图右文（经典对称）</a></li>
+  <li><a href="#右图左文变换节奏" id="toc-右图左文变换节奏" class="nav-link" data-scroll-target="#右图左文变换节奏">2. 右图左文（变换节奏）</a></li>
+  <li><a href="#图片环绕文字float" id="toc-图片环绕文字float" class="nav-link" data-scroll-target="#图片环绕文字float">3. 图片环绕文字（float）</a></li>
+  <li><a href="#多图并列-说明" id="toc-多图并列-说明" class="nav-link" data-scroll-target="#多图并列-说明">4. 多图并列 + 说明</a></li>
+  <li><a href="#图片居中-图注" id="toc-图片居中-图注" class="nav-link" data-scroll-target="#图片居中-图注">5. 图片居中 + 图注</a></li>
+  <li><a href="#图片加圆角阴影" id="toc-图片加圆角阴影" class="nav-link" data-scroll-target="#图片加圆角阴影">6. 图片加圆角阴影</a></li>
+  <li><a href="#文字上下分布中间插图" id="toc-文字上下分布中间插图" class="nav-link" data-scroll-target="#文字上下分布中间插图">7. 文字上下分布，中间插图</a></li>
+  <li><a href="#代码-图片并排教程演示" id="toc-代码-图片并排教程演示" class="nav-link" data-scroll-target="#代码-图片并排教程演示">8. 代码 + 图片并排（教程演示）</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">果果</h1>
-</div>
+<h1 class="title">多种图文混排示例</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">教程</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -205,80 +227,145 @@ window.Quarto = {
 </header>
 
 
+<section id="左图右文经典对称" class="level1">
+<h1>1. 左图右文（经典对称）</h1>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/test.png" class="img-fluid figure-img"></p>
+<figcaption>左图示意</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<p>这里是文字说明，支持<strong>加粗</strong>、公式 <code>$E=mc^2$</code>、代码等。</p>
+<ul>
+<li>支持列表</li>
+<li>支持数学公式</li>
+<li>支持代码块</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="右图左文变换节奏" class="level1">
+<h1>2. 右图左文（变换节奏）</h1>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>这里是文字内容，前文引导。</p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/test.png" class="img-fluid figure-img"></p>
+<figcaption>右图示意</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="图片环绕文字float" class="level1">
+<h1>3. 图片环绕文字（float）</h1>
+<p><img src="../images/test.png" alt="环绕图" style="float: left; margin: 0 20px 10px 0; width: 300px; border-radius: 8px; box-shadow: 0 0 8px #ccc;"></p>
+<p>这段文字会自动环绕图片，适合故事叙述、长段文本说明。注意移动端时可能需要调整样式。</p>
+<hr>
+</section>
+<section id="多图并列-说明" class="level1">
+<h1>4. 多图并列 + 说明</h1>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/test.png" class="img-fluid figure-img"></p>
+<figcaption>图1</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/test.png" class="img-fluid figure-img"></p>
+<figcaption>图2</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p>多张图对比说明，适合展示细节或数据对比。</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="图片居中-图注" class="level1">
+<h1>5. 图片居中 + 图注</h1>
+<div class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/test.png" class="img-fluid figure-img"></p>
+<figcaption>封面图</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+<section id="图片加圆角阴影" class="level1">
+<h1>6. 图片加圆角阴影</h1>
+<p><img src="../images/test.png" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></p>
+<hr>
+</section>
+<section id="文字上下分布中间插图" class="level1">
+<h1>7. 文字上下分布，中间插图</h1>
+<p>第一段文字说明……</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/test.png" class="img-fluid figure-img"></p>
+<figcaption>中间插图</figcaption>
+</figure>
+</div>
+<p>第二段文字说明……</p>
+<hr>
+</section>
+<section id="代码-图片并排教程演示" class="level1">
+<h1>8. 代码 + 图片并排（教程演示）</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Quarto!"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>:::{<span class="co">#quarto-navigation-envelope .hidden}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>[果果的博客]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl"</span>}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>[果果的博客]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXItdGl0bGU="</span>}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>[首页]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI66aaW6aG1"</span>}</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>[<span class="op">/</span>index.html]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI6L2luZGV4Lmh0bWw="</span>}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>[分类]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI65YiG57G7"</span>}</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>[<span class="op">/</span>categories.html]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI6L2NhdGVnb3JpZXMuaHRtbA=="</span>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>[所有文章]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI65omA5pyJ5paH56ug"</span>}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>[<span class="op">/</span>posts.html]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI6L3Bvc3RzLmh0bWw="</span>}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>[标签]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI65qCH562+"</span>}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>[<span class="op">/</span>tags.html]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI6L3RhZ3MuaHRtbA=="</span>}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>[关于]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI65YWz5LqO"</span>}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>[<span class="op">/</span>about.html]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWludC1uYXZiYXI6L2Fib3V0Lmh0bWw="</span>}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>:::{<span class="co">#quarto-listing-pipeline .hidden}</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>[$e <span class="op">=</span> mC<span class="op">^</span><span class="dv">2</span>$]{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cXVhcnRvLWVuYWJsZS1tYXRoLWlubGluZQ=="</span>}</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>:::{.hidden .quarto<span class="op">-</span>markdown<span class="op">-</span>envelope<span class="op">-</span>contents render<span class="op">-</span><span class="bu">id</span><span class="op">=</span><span class="st">"cGlwZWxpbmUtbGlzdGluZy1saXN0aW5n"</span>}</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>::: {.<span class="bu">list</span> .quarto<span class="op">-</span>listing<span class="op">-</span>default}</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>```{<span class="op">=</span>html}</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"listing-no-matching d-none"</span><span class="op">&gt;</span>No matching items<span class="op">&lt;/</span>div<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 
+</section>
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU2JTk1JTk5JUU3JUE4JThC" data-listing-file-modified-sort="1749521734896" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test3.html" class="no-external">多种图文混排示例</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JTk5JUU3JUE4JThC'); return false;">教程</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/test3.html" class="no-external">
-<div class="metadata-value listing-tags">
-教程1
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="JUU2JTk1JUIwJUU1JUFEJUE2" data-listing-date-sort="1749398400000" data-listing-file-modified-sort="1749453185854" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test2.html" class="no-external">线性代数基础</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">数学</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/test2.html" class="no-external">
-<div class="listing-date">
-Jun 9, 2025
-</div>
-<div class="metadata-value listing-tags">
-线性代数1,教程1
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU4JThCJUIxJUU4JUFGJUFE" data-listing-date-sort="1749398400000" data-listing-file-modified-sort="1749520226030" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test.html" class="no-external">线性代数基础</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">数学</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU4JThCJUIxJUU4JUFGJUFE'); return false;">英语</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/test.html" class="no-external">
-<div class="listing-date">
-Jun 9, 2025
-</div>
-<div class="metadata-value listing-tags">
-线性代数,教程
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing"></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

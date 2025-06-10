@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>果果 – 果果的博客</title>
+<title>标签 – 果果的博客</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,9 +79,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-categories','listing-tags',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -150,7 +150,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">首页</span></a>
   </li>  
   <li class="nav-item">
@@ -162,7 +162,7 @@ window.Quarto = {
 <span class="menu-text">所有文章</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tags.html"> 
+    <a class="nav-link active" href="./tags.html" aria-current="page"> 
 <span class="menu-text">标签</span></a>
   </li>  
   <li class="nav-item">
@@ -177,23 +177,23 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="JUU2JTk1JTk5JUU3JUE4JThC">教程 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU2JTk1JUIwJUU1JUFEJUE2">数学 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="JUU4JThCJUIxJUU4JUFGJUFE">英语 <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">果果</h1>
+<h1 class="title">标签</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -209,72 +209,78 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU2JTk1JTk5JUU3JUE4JThC" data-listing-file-modified-sort="1749521734896" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test3.html" class="no-external">多种图文混排示例</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JTk5JUU3JUE4JThC'); return false;">教程</div>
-
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="JUU2JTk1JTk5JUU3JUE4JThC" data-listing-file-modified-sort="1749521734896" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
+<a href="./posts/test3.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="images/test.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+多种图文混排示例
+</h5>
+<div class="card-text listing-description delink">
+这里是文字说明，支持<strong>加粗</strong>、公式 <code>$E=mc^2$</code>、代码等。
 </div>
-<div class="metadata">
-<a href="./posts/test3.html" class="no-external">
-<div class="metadata-value listing-tags">
-教程1
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="JUU2JTk1JUIwJUU1JUFEJUE2" data-listing-date-sort="1749398400000" data-listing-file-modified-sort="1749453185854" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test2.html" class="no-external">线性代数基础</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">数学</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
 </div>
 </div>
-<div class="metadata">
-<a href="./posts/test2.html" class="no-external">
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="JUU2JTk1JUIwJUU1JUFEJUE2" data-listing-date-sort="1749398400000" data-listing-file-modified-sort="1749453185854" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<a href="./posts/test2.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+线性代数基础
+</h5>
+<div class="card-text listing-description delink">
+这是行内公式 <span class="math inline">\(E=mc^2\)</span>。 这是行内公式 <span class="math inline">\(E=mc^2\)</span>。 这是行内公式 <span class="math inline">\(E=mc^2\)</span>。 这是行内公式 <span class="math inline">\(E=mc^2\)</span>。 这是块级公式：
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
 <div class="listing-date">
 Jun 9, 2025
 </div>
-<div class="metadata-value listing-tags">
-线性代数1,教程1
-</div>
-</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU4JThCJUIxJUU4JUFGJUFE" data-listing-date-sort="1749398400000" data-listing-file-modified-sort="1749520226030" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/test.html" class="no-external">线性代数基础</a>
-</h3>
-<div class="listing-categories">
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU4JThCJUIxJUU4JUFGJUFE" data-listing-date-sort="1749398400000" data-listing-file-modified-sort="1749520226030" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
+<a href="./posts/test.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./images/test.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+线性代数基础
+</h5>
+<div class="card-text listing-description delink">
+这是行内公式 <span class="math inline">\(E=mc^2\)</span>。
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
 
-<div class="listing-category" onclick="window.quartoListingCategory('JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">数学</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU4JThCJUIxJUU4JUFGJUFE'); return false;">英语</div>
-
 </div>
-</div>
-<div class="metadata">
-<a href="./posts/test.html" class="no-external">
 <div class="listing-date">
 Jun 9, 2025
 </div>
-<div class="metadata-value listing-tags">
-线性代数,教程
 </div>
-</a>
 </div>
+</div></a>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
